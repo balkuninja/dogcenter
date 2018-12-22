@@ -2,12 +2,14 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="css/materialize.css">
+    <link rel="stylesheet" href="css/nouislider.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"> </script>
     <link rel="stylesheet" href="css/owl.carousel.css">
     <link rel="stylesheet" href="css/owl.theme.default.css">
     <script src="js/owl.carousel.js"></script>
     <script type="application/javascript" src="js/materialize.js"></script>
+    <script type="application/javascript" src="js/nouislider.js"></script>
     <meta charset="UTF-8">
     <title>Dogsss</title>
 </head>
@@ -141,7 +143,61 @@
                             <i class="close material-icons">close</i>
                         </div>
                     </div>
-                    <button class="btn-flat">Подобрать</button>
+                    <div class="clearfix"></div>
+                    <ul class="collapsible">
+                        <li>
+                            <div class="collapsible-header"><i class="material-icons">filter_drama</i>Подобрать питомца</div>
+                            <div class="collapsible-body white">
+                                <div class="input-field col s12 m6">
+                                    <select name="landing_filter_gender" id="landing_filter_gender">
+                                        <option value="0">Любой</option>
+                                        <option value="1">Мальчик</option>
+                                        <option value="2">Девочка</option>
+                                    </select>
+                                    <label for="landing_filter_gender">Пол</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <select name="landing_filter_age" id="landing_filter_age">
+                                        <option value="0">Любой</option>
+                                        <option value="1">до 4 мес.</option>
+                                        <option value="2">от 4 мес.</option>
+                                    </select>
+                                    <label for="landing_filter_age">Возраст</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <select name="landing_filter_type" id="landing_filter_type">
+                                        <option value="0">Любой</option>
+                                        <option value="1">Мини</option>
+                                        <option value="2">Стандарт</option>
+                                    </select>
+                                    <label for="landing_filter_type">Тип</label>
+                                </div>
+                                <div class="input-field col s12 m6">
+                                    <select name="landing_filter_show" id="landing_filter_show">
+                                        <option value="0">Любой</option>
+                                        <option value="1">Планирую</option>
+                                        <option value="2">Не планирую</option>
+                                    </select>
+                                    <label for="landing_filter_show">Выставки</label>
+                                </div>
+                                <div class="col s12">
+                                    <p>Цена</p>
+                                    <div id="landing_filter_cost"></div>
+                                    <div class="input-field col s6">
+                                        <input type="text" name="landing_filter_cost_min" id="landing_filter_cost_min" value="0">
+                                        <label for="landing_filter_cost_min">мин.</label>
+                                    </div>
+                                    <div class="input-field col s6">
+                                        <input type="text" name="landing_filter_cost_max" id="landing_filter_cost_max" value="100000">
+                                        <label for="landing_filter_cost_max">макс.</label>
+                                    </div>
+                                </div>
+                                <button class="btn right waves-effect waves-light">подобрать</button>
+                                <div class="clearfix"></div>
+                            </div>
+                        </li>
+                        
+                    </ul>
                     
                     <div class="carousel">
                         <div class="carousel-item" href="#one!">
@@ -204,11 +260,43 @@
 </html>
 
 <script>
-     $(document).ready(function(){
-    $('.carousel').carousel({
-        numVisible: 3,
-        dist: 0,
+    $(document).ready(function() {
+        var slider = document.getElementById('landing_filter_cost');
+        noUiSlider.create(slider, {
+            start: [0, 100000],
+            connect: true,
+            step: 500,
+            orientation: 'horizontal', // 'horizontal' or 'vertical'
+            range: {
+                'min': 0,
+                'max': 100000
+            },
+            format: wNumb({
+                decimals: 0
+            })
+        }); 
+        
+        slider.noUiSlider.on("slide", function(values, handle) {
+            var value = values[handle];
+            
+            if (handle) {
+                $('#landing_filter_cost_max').val(value).parent().find('label').addClass('active');
+            } else {
+                $('#landing_filter_cost_min').val(value).parent().find('label').addClass('active');
+            }
+        });
     });
+    
+    $('#landing_filter_cost_min, #landing_filter_cost_max').on('change', function () {
+        $('#landing_filter_cost').noUiSlider.set([this.value, null]);
+    });
+    
+     $(document).ready(function() {
+         M.AutoInit();
+        $('.carousel').carousel({
+            numVisible: 3,
+            dist: 0,
+        });
   });
     
  $('.carousel.carousel-slider').carousel({

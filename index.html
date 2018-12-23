@@ -11,60 +11,82 @@
     <script type="application/javascript" src="js/materialize.js"></script>
     <script type="application/javascript" src="js/nouislider.js"></script>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dogsss</title>
 </head>
 <body>
     <header>
-        <div class="container">
+        <div class="container scrollspy" id="scroll_main">
             <div class="row" style="margin-bottom: 0px;">
                 <div class="col s12">
-                    <span class="col s12 m6" style="margin-top: 5px;">Dog Center</span>
-                        <div class="col s12 m3">
-                               <a href="tel:+74955146614" class="btn-flat white pa_phone hide-on-med-and-down">
-<!--                            <i class="material-icons left" aria-hidden="true" style="transform: scale(-1, 1)">phone</i>-->
+                    <div class="col s12 m6" style="margin-top: 5px;">Dog Center
+                        <a href="#" data-target="slide-out" class="sidenav-trigger hide-on-med-and-up right"><i class="material-icons black-text">menu</i></a>
+                    </div>
+                    <div class="col s12 m3 hide-on-med-and-down">
+                           <a href="tel:+74955146614" class="btn-flat white pa_phone">
+                            <i class="material-icons left" aria-hidden="true" style="transform: scale(-1, 1)">phone</i>
                             +3 80-50-078-78-71
                         </a>
-                        </div>
-                    <div class="col s12 m3">
+                    </div>
+                    <div class="col s12 m3 hide-on-med-and-down">
                         <button class="btn-flat waves-effect waves-light" style="font-size: 12px;">Заказать обратный звонок</button>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="row light-green" style="height: 414px">
-           <div class="container">
-               <div class="col s12">
-                    <a href="#" class="btn-flat white-text waves-effect waves-light">главная</a>
-                    <a href="#" class="btn-flat white-text waves-effect waves-light">Почему мы</a>
-                    <a href="#" class="btn-flat white-text waves-effect waves-light">Галерея</a>
-                    <a href="#" class="btn-flat white-text waves-effect waves-light">Отзывы</a>
-                    <a href="#" class="btn-flat white-text waves-effect waves-light">Контакты</a>
-               </div>
-                <div class="col s6">
-                        <h1 style="font-size: 36px; color: white">Dog Center</h1>
-                        <p style="color: white">
-                          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis amet hic laudantium, rerum ab numquam fugit, explicabo quibusdam blanditiis excepturi, sequi cupiditate accusamus? Eius cumque, illo. Error nam quas magnam possimus officia atque, minus commodi nesciunt blanditiis enim dolore, veritatis ullam. Consectetur omnis sed architecto voluptatum, dolore, asperiores. Corporis minus velit aut ratione deleniti molestias ipsam possimus culpa assumenda vel error voluptatum laborum quibusdam ut numquam, sunt libero, neque unde, obcaecati, nihil tempore. Optio et nisi, aliquam nulla dolore illo molestias sequi delectu
-                        </p>
-                          <button class="btn-flat btn-large white">Подобрать питомца</button>
+        <div class="row light-green" style="height: 414px; position: relative">
+            <div class="row fixed-nav light-green">
+                 <div class="container">
+                    <div class="col s12 hide-on-small-only">
+                        <a href="#scroll_main" class="btn-flat white-text waves-effect waves-light">главная</a>
+                        <a href="#scroll_aboutus" class="btn-flat white-text waves-effect waves-light">Почему мы</a>
+                        <a href="#scroll_gallery" class="btn-flat white-text waves-effect waves-light">Галерея</a>
+                        <a href="#" class="btn-flat white-text waves-effect waves-light">Отзывы</a>
+                        <a href="#" class="btn-flat white-text waves-effect waves-light">Контакты</a>
+                    </div>
+                 </div>
+            </div>    
+            <div class="container">
+                <div class="col s12 m12 l6">
+                    <h1 class="hide-on-med-and-down" style="font-size: 36px; color: white">Dog Center</h1>
+                    <p style="color: white">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis amet hic laudantium, rerum ab numquam fugit, explicabo quibusdam blanditiis excepturi, sequi cupiditate accusamus? Eius cumque, illo. Error nam quas magnam possimus officia atque, minus commodi nesciunt blanditiis enim dolore, veritatis ullam. Consectetur omnis sed architecto voluptatum, dolore, asperiores. Corporis minus velit aut ratione
+                    </p>
                 </div>
-                <div class="col s6">
-                      <div class="carousel carousel-slider center" style="max-height: 400px">
-                           <a class="carousel-item" href="#one!"><img src="https://sonnikpro.com/wp-content/uploads/2017/03/shhenki3.jpg"></a>
+                
+                <div style="position: absolute; bottom: 18px">
+                    <button class="btn-flat btn-large white">Подобрать питомца</button>
+                </div>
+                
+                <div class="col s12 m12 l6 hide-on-med-and-down">
+                      <div class="carousel carousel-slider" style="max-height: 400px;">
+                           <a class="carousel-item" href="#one!"><img class="tttest" src="https://sonnikpro.com/wp-content/uploads/2017/03/shhenki3.jpg"></a>
                         <a class="carousel-item" href="#two!">
-                            <img src="http://www.alaskan.ru/upload/storage/img/577.jpg" alt="">
+                            <img class="tttest" src="http://www.alaskan.ru/upload/storage/img/577.jpg" alt="">
                         </a>
                         <a class="carousel-item" href="#three!">
-                            <img src="https://sonnikpro.com/wp-content/uploads/2017/03/shhenki3.jpg" alt="">
+                            <img class="tttest" src="https://sonnikpro.com/wp-content/uploads/2017/03/shhenki3.jpg" alt="">
                         </a>
                       </div>
                 </div>
             </div>
         </div>
     </header>
+    
+    <assign>
+        <ul id="slide-out" class="sidenav">
+            <li><a href="#" class="btn-flat waves-effect waves-light">главная</a></li>
+            <li><a href="#" class="btn-flat waves-effect waves-light">Почему мы</a></li>
+            <li><a href="#" class="btn-flat waves-effect waves-light">Галерея</a></li>
+            <li><a href="#" class="btn-flat waves-effect waves-light">Отзывы</a></li>
+            <li><a href="#" class="btn-flat waves-effect waves-light">Контакты</a></li>
+        </ul>
+    </assign>
+    
     <main>
         <div class="row">
-            <div class="container">
+            <div class="container scrollspy" id="scroll_aboutus">
                <h3 class="col s12 light-green-text text-darken-1">Почему мы?</h3>
                 <div class="col s12">
                    <div class="col s12 m4">
@@ -78,7 +100,7 @@
                    <div class="col s12 m4">
                         <div class="card">
                             <div class="card-content">
-                                                         <span class="card-title" style="font-size: 30px">1</span>
+                                                         <span class="card-title" style="font-size: 30px">2</span>
                                 <p>ВСЕ наши щенки проходят медицинское обследование</p>
                             </div>
                         </div>
@@ -86,7 +108,7 @@
                    <div class="col s12 m4">
                         <div class="card">
                             <div class="card-content">
-                                                         <span class="card-title" style="font-size: 30px">1</span>
+                                                         <span class="card-title" style="font-size: 30px">3</span>
                                 <p>ВСЕ наши щенки проходят медицинское обследование</p>
                             </div>
                         </div>
@@ -94,7 +116,7 @@
                    <div class="col s12 m4">
                         <div class="card">
                             <div class="card-content">
-                                                         <span class="card-title" style="font-size: 30px">1</span>
+                                                         <span class="card-title" style="font-size: 30px">4</span>
                                 <p>ВСЕ наши щенки проходят медицинское обследование</p>
                             </div>
                         </div>
@@ -102,7 +124,7 @@
                    <div class="col s12 m4">
                         <div class="card">
                             <div class="card-content">
-                                <span class="card-title" style="font-size: 30px">1</span>
+                                <span class="card-title" style="font-size: 30px">5</span>
                                 <p>ВСЕ наши щенки проходят медицинское обследование</p>
                             </div>
                         </div>
@@ -110,7 +132,7 @@
                    <div class="col s12 m4">
                         <div class="card">
                             <div class="card-content">
-                                                         <span class="card-title" style="font-size: 30px">1</span>
+                                                         <span class="card-title" style="font-size: 30px">6</span>
                                 <p>ВСЕ наши щенки проходят медицинское обследование</p>
                             </div>
                         </div>
@@ -120,7 +142,7 @@
         </div>
         
       <div class="row grey lighten-4">
-            <div class="container">
+            <div class="container scrollspy" id="scroll_gallery">
                <h3 class="col s12 light-green-text text-darken-1">Наши щенки</h3>
                 <div class="col s12">
                     <div class="col s12">
@@ -198,54 +220,101 @@
                         </li>
                         
                     </ul>
-                    
-                    <div class="carousel">
-                        <div class="carousel-item" href="#one!">
-                            <div class="card">
-                                <div class="card-image">
-                                  <img src="images/sample-1.jpg">
-                                  <span class="card-title">Card Title</span>
+                    <div id="rtesets">
+                        <div class="owl-carousel owl-theme">
+                            <div class="card hoverable">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" src="http://terrs.ru/wp-content/uploads/0001.00-500x400.jpeg">
                                 </div>
                                 <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
+                                    <span class="card-title activator grey-text text-darken-4 truncate">Шарик<i class="material-icons right">more_vert</i></span>
+                                    <p><a href="#" class="btn green">Подробней</a></p>
                                 </div>
-                                <div class="card-action">
-                                    <a href="#">This is a link</a>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Описание<i class="material-icons right">close</i></span>
+                                    <p>Пол: мужской</p>
+                                    <p>Цвет: белый</p>
+                                    <p>Возраст: 3.5 месяца</p>
+                                    <p>Тип: стандарт</p>
+                                    <p>Выставки: да</p>
+                                    <p>Цена: 30 000р</p>
                                 </div>
-                            </div>                     
-                        </div>
-                        <div class="carousel-item" href="#one!">
-                            <div class="card">
-                                <div class="card-image">
-                                  <img src="images/sample-1.jpg">
-                                  <span class="card-title">Card Title</span>
-                                </div>
-                                <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
-                                </div>
-                                <div class="card-action">
-                                    <a href="#">This is a link</a>
-                                </div>
-                            </div>                     
-                        </div>
-                        <div class="carousel-item" href="#one!">
-                            <div class="card">
-                                <div class="card-image">
-                                  <img src="images/sample-1.jpg">
-                                  <span class="card-title">Card Title</span>
+                            </div>
+                           <div class="card hoverable">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" src="http://www.0629.in.ua/_bd/125/46479158.jpg">
                                 </div>
                                 <div class="card-content">
-                                    <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.</p>
+                                    <span class="card-title activator grey-text text-darken-4 truncate">Матроскин<i class="material-icons right">more_vert</i></span>
+                                    <p><a href="#" class="btn green">Подробней</a></p>
                                 </div>
-                                <div class="card-action">
-                                    <a href="#">This is a link</a>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Описание<i class="material-icons right">close</i></span>
+                                    <p>Пол: мужской</p>
+                                    <p>Цвет: белый</p>
+                                    <p>Возраст: 3.5 месяца</p>
+                                    <p>Тип: мини</p>
+                                    <p>Выставки: да</p>
+                                    <p>Цена: 30 000р</p>
                                 </div>
-                            </div>                     
+                            </div>
+                           <div class="card hoverable">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" src="https://gde.ru/images/img_ru/474x354/1490845.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4 truncate">Матроскин<i class="material-icons right">more_vert</i></span>
+                                    <p><a href="#" class="btn green">Подробней</a></p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Описание<i class="material-icons right">close</i></span>
+                                    <p>Пол: мужской</p>
+                                    <p>Цвет: белый</p>
+                                    <p>Возраст: 3.5 месяца</p>
+                                    <p>Тип: мини</p>
+                                    <p>Выставки: да</p>
+                                    <p>Цена: 30 000р</p>
+                                </div>
+                            </div>
+                           <div class="card hoverable">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" src="https://avatars.mds.yandex.net/get-pdb/805781/d3a26548-4eba-4214-859b-5d85f76bec02/orig">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4 truncate">Матроскин<i class="material-icons right">more_vert</i></span>
+                                    <p><a href="#" class="btn green">Подробней</a></p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Описание<i class="material-icons right">close</i></span>
+                                    <p>Пол: мужской</p>
+                                    <p>Цвет: белый</p>
+                                    <p>Возраст: 3.5 месяца</p>
+                                    <p>Тип: мини</p>
+                                    <p>Выставки: да</p>
+                                    <p>Цена: 30 000р</p>
+                                </div>
+                            </div>
+                           <div class="card hoverable">
+                                <div class="card-image waves-effect waves-block waves-light">
+                                    <img class="activator" src="http://terrs.ru/wp-content/uploads/0001.01-300x201.jpg">
+                                </div>
+                                <div class="card-content">
+                                    <span class="card-title activator grey-text text-darken-4 truncate">Матроскин<i class="material-icons right">more_vert</i></span>
+                                    <p><a href="#" class="btn green">Подробней</a></p>
+                                </div>
+                                <div class="card-reveal">
+                                    <span class="card-title grey-text text-darken-4">Описание<i class="material-icons right">close</i></span>
+                                    <p>Пол: мужской</p>
+                                    <p>Цвет: белый</p>
+                                    <p>Возраст: 3.5 месяца</p>
+                                    <p>Тип: мини</p>
+                                    <p>Выставки: да</p>
+                                    <p>Цена: 30 000р</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                  
                     <div class="col s12 right-align" style="margin-bottom: 18px;">
                         <button class="btn orange">Посмотреть всех</button>
                     </div>
@@ -254,7 +323,7 @@
         </div>
     </main>
     <footer>
-        
+        <button class="btn-floating btn-large pulse waves-effect waves-light green" style="position: fixed; bottom: 15px; right: 15px; "><i class="material-icons">call</i></button>
     </footer>
 </body>
 </html>
@@ -301,7 +370,10 @@
     
  $('.carousel.carousel-slider').carousel({
     fullWidth: true,
-    indicators: true
+    indicators: true,
+//     numVisible: 1,
+//     dist: 0,
+//     shift: 0,
   });
     
     autoplay();
@@ -316,4 +388,108 @@ function autoplay() {
     .nav-wrapper {
         background-color: white;
     }
+</style>
+
+<script>
+// Create a clone of the menu, right next to original.
+$('.fixed-nav').addClass('original').clone().insertAfter('.fixed-nav').addClass('cloned').css('position','fixed').css('top','0').css('margin-top','0').css('z-index','500').removeClass('original').hide();
+
+scrollIntervalID = setInterval(stickIt, 10);
+
+
+function stickIt() {
+
+  var orgElementPos = $('.original').offset();
+  orgElementTop = orgElementPos.top;               
+
+  if ($(window).scrollTop() >= (orgElementTop)) {
+    // scrolled past the original position; now only show the cloned, sticky element.
+
+    // Cloned element should always have same left position and width as original element.     
+    orgElement = $('.original');
+    coordsOrgElement = orgElement.offset();
+    leftOrgElement = coordsOrgElement.left;  
+    widthOrgElement = orgElement.css('width');
+    $('.cloned').css('left',leftOrgElement+'px').css('top',0).css('width',widthOrgElement).show();
+    $('.original').css('visibility','hidden');
+  } else {
+   
+    $('.cloned').hide();
+    $('.original').css('visibility','visible');
+  }
+}
+    
+$('#rtesets .owl-carousel').owlCarousel({
+    items: 4,
+    margin: 16,
+    stagePadding: 0,
+    nav: true,
+    navText: ['',''],
+    dots: false,
+    dotsEach: true,
+    lazyLoad: false,
+    responsive:{
+        0:{
+            items:1,
+            stagePadding: 20,
+            nav:false,        
+        },
+        700:{
+            items:2,
+            stagePadding: 20,
+            nav:true
+        },
+        1000:{
+            items:4,
+        }
+    }
+});
+</script>
+
+
+<style>
+    .tttest {
+        width: 100%;
+        height: 400px;
+    }
+</style>
+
+<style>
+.owl-carousel .owl-nav .owl-prev,
+  .owl-carousel .owl-nav .owl-next,
+  .owl-carousel .owl-dot {
+    font-family: 'Material Icons';
+    font-size: 4rem;
+}
+.owl-nav {height:0;margin:0;}
+.owl-carousel .owl-nav .owl-prev:before{
+    font-family: "Material Icons";
+    content: "\E5CB";
+    font-size: 4rem;
+    margin-left:16px;
+    position: absolute;
+	  top: 40%;
+    left: 0px;
+    height: auto;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.1),
+                 0px 0px 8px rgba(0,0,0,0.05),
+                 0px 0px 12px rgba(0,0,0,0.05);
+}
+.owl-carousel .owl-nav .owl-next:after{
+    font-family: "Material Icons";
+    content: "\E5CC";
+    font-size: 4rem;
+    margin-right: 16px;
+    position: absolute;
+	  top: 40%;
+    right: 0px;
+    height: 100%;
+    text-shadow: 0px 0px 5px rgba(0,0,0,0.1),
+                 0px 0px 8px rgba(0,0,0,0.05),
+                 0px 0px 12px rgba(0,0,0,0.05);
+}
+    .card-image {
+    height: 250px; /* Your height here */
+    overflow: hidden;
+}
 </style>
